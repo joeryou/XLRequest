@@ -40,17 +40,24 @@ class XlRequest {
 		
 		$this->client =new Client(['base_uri' => 'https://my.xl.co.id']); 
 		
-		$this->imei = '303975796'; 
+		$this->imei = '3920182791'; 
 		
 		$this->date = date('Ymdhis');
 		
 		$this->header = [
 			'Host' => 'my.xl.co.id',
-			'User-Agent'=>'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0',
+			'User-Agent'=>'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
 			'Accept'=> 'application/json, text/plain, */*',
 			'Accept-Language'=> 'en-US,en;q=0.5',
 			'Accept-Encoding'=> 'gzip, deflate, br',
+			'Referer: https://my.xl.co.id/pre/index1.html',
 			'Content-Type'=> 'application/json',
+			'Access-Control-Allow-Origin: True',
+			'Content-Length: 955',
+			'Cookie: TS01a72baf=017f69ee3cb8465536131770f47ba7b8853db7df73ec5a24b32945977792c4ebe9a200d1bb0ec7453bcdda667612b316037c101d2b2662f0b6c3ac0321e640046b3a8ed02c; TS01e70a0f=017f69ee3cb0925fbed42b67f9cabc96d404050d2d0ac64d7235549282584b9eb0ac0c4d4967f89a8540dcd6f0154b69e0e1a66f2568725d3c9cef3560cb79b4693b5e5916; connect.sid=s%3AXxL3eXl1BwsX2PuBpULaaoUJ1O9WNsxQ.oPtJNo52ZfA4yhKXt3crp9Ismq7JoR3ep%2Bmej9jwfZg',
+			'DNT: 1',
+			'Connection: keep-alive',
+
 		];
 	}
 	public function login($msisdn, $passwd) {
